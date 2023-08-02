@@ -39,7 +39,7 @@ public class Persona {
 
     @Override
     public String toString() {
-        return "nome giocatore:" + " - " + nome + '\'' +
+        return "" + " - " + nome + '\'' +
                 ", eta:" + " - " + eta;
     }
 

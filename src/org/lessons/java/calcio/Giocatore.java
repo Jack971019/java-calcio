@@ -30,7 +30,7 @@ public class Giocatore extends Persona{
 
     @Override
     public String toString() {
-        return super.toString() + "Nome giocatore:" +" - " +
+        return super.toString() + "nome giocatore " +" - " +
                 "ruolo:'" +  " - " + ruolo + '\'';
     }
 }

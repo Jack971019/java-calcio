@@ -28,9 +28,8 @@ public class Squadra {
 
     @Override
     public String toString() {
-        return "Squadra:" +
-                "listagiocatori=" + listagiocatori +
-                ", allenatore=" + allenatore +
+        return "giocatori" + listagiocatori +
+                " e ha come allenatore=" + allenatore +
                 '}';
     }
 }

@@ -58,7 +58,14 @@ public class Main {
         }
 
 
-        System.out.println(listaGiocatori);
+        int etaLeenatore = random.nextInt(45, 75);
+        int strategiaAllenatoreSquadra = random.nextInt(0, strategieAllenatore.length);
+
+        Allenatore nuovoAllenatore = new Allenatore("Mourinho", etaLeenatore, strategieAllenatore[strategiaAllenatoreSquadra]);
+
+        Squadra nuovaSquadra = new Squadra(listaGiocatori, nuovoAllenatore);
+
+        System.out.println(" la tua nuova squadra ha" + nuovaSquadra);
 
 
 
