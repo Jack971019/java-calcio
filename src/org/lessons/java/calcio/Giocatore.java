@@ -4,7 +4,7 @@ public class Giocatore extends Persona{
 
     // ATTRIBUTI
 
-    String ruolo;
+    private String ruolo;
 
     // COSTRUTTORI
 
@@ -16,5 +16,21 @@ public class Giocatore extends Persona{
 
     // GETTER E SETTER
 
+    public String getRuolo() {
+        return ruolo;
+    }
+
+    public void setRuolo(String ruolo) {
+        this.ruolo = ruolo;
+    }
+
+
     // METODI
+
+
+    @Override
+    public String toString() {
+        return super.toString()+ "Giocatore" +
+                "ruolo='" + ruolo + '\'';
+    }
 }

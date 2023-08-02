@@ -3,9 +3,9 @@ package org.lessons.java.calcio;
 public class Persona {
     // ATTRIBUTI
 
-    String nome;
+     private String nome;
 
-    int eta;
+    private int eta;
 
     // COSTRUTTORI
 
@@ -17,5 +17,32 @@ public class Persona {
 
     // GETTER AND SETTER
 
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public int getEta() {
+        return eta;
+    }
+
+    public void setEta(int eta) {
+        this.eta = eta;
+    }
+
+
     // METODI
+
+
+    @Override
+    public String toString() {
+        return "Persona{" +
+                "nome='" + nome + '\'' +
+                ", eta=" + eta +
+                '}';
+    }
+
 }

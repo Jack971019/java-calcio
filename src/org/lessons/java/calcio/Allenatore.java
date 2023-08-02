@@ -4,11 +4,11 @@ public class Allenatore extends Persona{
 
     // ATTRIBUTI
 
-    boolean strategia;
+    private String strategia;
 
     // COSTRUTTORI
 
-    public Allenatore(String nome, int eta, boolean strategia) {
+    public Allenatore(String nome, int eta, String strategia) {
         super(nome, eta);
         this.strategia = strategia;
     }
@@ -16,5 +16,21 @@ public class Allenatore extends Persona{
 
     // GETTER E SETTER
 
+    public String getStrategia() {
+        return strategia;
+    }
+
+    public void setStrategia(String strategia) {
+        this.strategia = strategia;
+    }
+
+
     // METODI
+
+
+    @Override
+    public String toString() {
+        return super.toString()+ "Allenatore" +
+                "strategia='" + strategia + '\'';
+    }
 }
