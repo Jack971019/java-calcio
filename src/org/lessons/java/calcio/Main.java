@@ -47,7 +47,8 @@ public class Main {
 
         List<Giocatore> listaGiocatori = new ArrayList<>();
 
-        while (listaGiocatori.size() < 11) {
+        for (int i = 0; i < 11; i++) {
+
             int giocatore = random.nextInt(0, nomiGiocatori.length);
             int ruolo = random.nextInt(0, ruoliGiocatori.length);
             int eta = random.nextInt(16, 40);
@@ -55,6 +56,7 @@ public class Main {
             Giocatore nuovoGiocatore = new Giocatore(nomiGiocatori[giocatore], eta, ruoliGiocatori[ruolo]);
             listaGiocatori.add(nuovoGiocatore);
         }
+
 
         System.out.println(listaGiocatori);
 

@@ -26,6 +26,11 @@ public class Squadra {
         listagiocatori.add(giocatore);
     }
 
-
-
+    @Override
+    public String toString() {
+        return "Squadra:" +
+                "listagiocatori=" + listagiocatori +
+                ", allenatore=" + allenatore +
+                '}';
+    }
 }
