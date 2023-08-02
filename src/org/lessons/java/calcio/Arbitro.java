@@ -15,7 +15,6 @@ public class Arbitro extends Persona{
 
     // METODI
 
-
     @Override
     public String toString() {
         return super.toString() + "Arbitro" +

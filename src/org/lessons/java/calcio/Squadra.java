@@ -7,8 +7,10 @@ public class Squadra {
 
     // ATTRIBUTI
 
-    private List<Giocatore> listagiocatori = new ArrayList<>();
+    private List<Giocatore> listagiocatori;
     private Allenatore allenatore;
+
+
 
     // COSTRUTTORI
 

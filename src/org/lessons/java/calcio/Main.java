@@ -34,7 +34,7 @@ public class Main {
     };
 
     private static final String[] ruoliGiocatori = {
-            "POR", "DC","DC", "TS", "TD", "CC", "CC", "CC", "AS", "AD", "ATT"
+            "DC","DC", "TS", "TD", "CC", "CC", "CC", "AS", "AD", "ATT"
     };
 
     private static final String[] strategieAllenatore = {
@@ -46,6 +46,12 @@ public class Main {
         Random random = new Random();
 
         List<Giocatore> listaGiocatori = new ArrayList<>();
+
+        /*int portiere = (random.nextInt(0, nomiGiocatori.length));
+        int etaPortiere = random.nextInt(16, 45 );
+        Giocatore portieresquadra = new Giocatore(nomiGiocatori[portiere], etaPortiere, "POR");*/ // creare portiere sempre
+
+
 
         for (int i = 0; i < 11; i++) {
 
@@ -63,11 +69,44 @@ public class Main {
 
         Allenatore nuovoAllenatore = new Allenatore("Mourinho", etaLeenatore, strategieAllenatore[strategiaAllenatoreSquadra]);
 
-        Squadra nuovaSquadra = new Squadra(listaGiocatori, nuovoAllenatore);
+        Squadra nuovaSquadrasquadra = new Squadra(listaGiocatori, nuovoAllenatore);
 
-        System.out.println(" la tua nuova squadra ha" + nuovaSquadra);
+        System.out.println(" la squadra ospite ha:" + nuovaSquadrasquadra);
+
+        // SQUADRA 2
+
+        for (int i = 0; i < 11; i++) {
+
+            int giocatore = random.nextInt(0, nomiGiocatori.length);
+            int ruolo = random.nextInt(0, ruoliGiocatori.length);
+            int eta = random.nextInt(16, 40);
+
+            Giocatore nuovoGiocatore = new Giocatore(nomiGiocatori[giocatore], eta, ruoliGiocatori[ruolo]);
+            listaGiocatori.add(nuovoGiocatore);
+        }
+
+        Allenatore nuovoAllenatoreSquadra1 = new Allenatore("Guardiola", 45, strategieAllenatore[strategiaAllenatoreSquadra]);
+
+        Squadra nuovaSquadraCasa = new Squadra(listaGiocatori, nuovoAllenatoreSquadra1);
+
+        System.out.println("La squadra di casa ha:" + nuovaSquadraCasa);
 
 
+        // SIMULAZIONE PARTITA
+
+        Partita partita = new Partita(nuovaSquadrasquadra, nuovaSquadraCasa, 0);
+
+        System.out.println("partita iniziata");
+        System.out.println("GOOOOL");
+        partita.aggiungigol();
+        System.out.println("GOOOOL");
+        partita.aggiungigol();
+        System.out.println("GOOOOL");
+        partita.aggiungigol();
+
+        System.out.println("Partita finita");
+
+        System.out.println("nella paritta sono stati segnati:" + partita.golTotali + "\s" + "gol");
 
     }
 }
